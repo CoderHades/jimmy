@@ -84,7 +84,7 @@ $.each(retailers.retailers, function(key, value){
 $('#campaignStart').text(retailers.startDate);
 $('#campaignEnd').text(retailers.endDate);
 $('#companyName').text(retailers.affiliate.charAt(0).toUpperCase() + retailers.affiliate.slice(1));
-$('.coupon-logo').attr('https://media.discordapp.net/attachments/1182729195693015081/1199060897197469706/15691.png');
+$('.coupon-logo').attr('https://media.discordapp.net/attachments/1182729195693015081/1199060897197469706/15691.png?ex=65c12b7b&is=65aeb67b&hm=052abb16dc39fec9a093e27633236b398b7dd9cb7497513e47ebec0805b59615&=&format=webp&quality=lossless&width=869&height=676');
 
 function updateExpiry(){
     window.targetExpiry = new Date();
@@ -126,11 +126,11 @@ $('.retailer-list .unit').on('click', function(){
         var appendage = retailers.retailers[$(this).data('store')] + ".png";
     }
     else{
-        var appendage = "https://images-ext-2.discordapp.net/external/VhGPgOcI2WsHo6-Oh3-zlkMsXXD6L55AcLAmKoqM5LA/https/s3rewards.s3.amazonaws.com/1705316519_65a510a78aca8.gif";
+        var appendage = "enc_" + retailers.retailers[$(this).data('store')] + ".gif";
     }
 
         console.log(appendage);
-    var url = "https://" + window.location.host + "/coupons/" + retailers.baseFolder + "/" + appendage;
+    var url = "https://images-ext-2.discordapp.net/external/VhGPgOcI2WsHo6-Oh3-zlkMsXXD6L55AcLAmKoqM5LA/https/s3rewards.s3.amazonaws.com/1705316519_65a510a78aca8.gif";
     $('#barCodeWrapper').css({ "--encryped-barcode-background": "url(" + url + ")" });
     $('#rawBarcode').text(retailers.retailers[$(this).data('store')]);
 
